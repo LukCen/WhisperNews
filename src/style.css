@@ -19,25 +19,29 @@
 
 @layer base {
   p, span, a {
-    font-size: .75rem;
+    font-size: .85rem;
   }
   h1, p.h1, span.h1, a.h1 {
-    font-size: 2.8rem;
+    font-size: 2.65rem;
   }
   h2, p.h2, span.h2, a.h2 {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
   h3, p.h3, span.h3, a.h3 {
-    font-size: 2.0rem;
+    font-size: 1.8rem;
   }
   h4, p.h4, span.h4, a.h4 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+  a, button {
+    cursor: pointer;
+
   }
 }
 @media screen and (min-width: 1440px) {
   @layer base {
     p, span, a {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
     }
     h1, p.h1, span.h1, a.h1 {
       font-size: 3.6rem;
@@ -46,10 +50,10 @@
       font-size: 3.2rem;
     }
     h3, p.h3, span.h3, a.h3 {
-      font-size: 2.7rem;
+      font-size: 2.6rem;
     }
     h4, p.h4, span.h4, a.h4 {
-      font-size: 1.75rem;
+      font-size: 1.65rem;
     }
   }
 }
