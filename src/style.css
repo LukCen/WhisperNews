@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, sans-serif;
+  color: var(--color-midnight);
+}
+
+@theme {
+  /* color theme */
+  --color-primary-orange: hsl(35, 77%, 62%);
+  --color-primary-red: hsl(5, 85%, 63%);
+  --color-offwhite: hsl(36, 100%, 99%);
+  --color-violet: hsl(236, 13%, 42%);
+  --color-midnight: hsl(240, 100%, 5%);
+  /* breakpoints */
+  --breakpoint-mobile: 375px;
+  --breakpoint-desktop: 1440px;
+}
+
+@layer base {
+  p, span, a {
+    font-size: .75rem;
+  }
+  h1, p.h1, span.h1, a.h1 {
+    font-size: 2.8rem;
+  }
+  h2, p.h2, span.h2, a.h2 {
+    font-size: 2.4rem;
+  }
+  h3, p.h3, span.h3, a.h3 {
+    font-size: 2.0rem;
+  }
+  h4, p.h4, span.h4, a.h4 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  @layer base {
+    p, span, a {
+      font-size: 1.25rem;
+    }
+    h1, p.h1, span.h1, a.h1 {
+      font-size: 3.6rem;
+    }
+    h2, p.h2, span.h2, a.h2 {
+      font-size: 3.2rem;
+    }
+    h3, p.h3, span.h3, a.h3 {
+      font-size: 2.7rem;
+    }
+    h4, p.h4, span.h4, a.h4 {
+      font-size: 1.75rem;
+    }
+  }
+}
