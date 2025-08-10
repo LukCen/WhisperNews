@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useThrottleFn } from '@vueuse/core';
-import { onMounted, onUnmounted, ref, type Ref } from 'vue';
+import { ref, type Ref } from 'vue';
 
 
 const safeClick = useThrottleFn(() => { menuActive.value = !menuActive.value }, 150)
