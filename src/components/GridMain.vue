@@ -32,10 +32,12 @@
           <h3 class="font-medium">Hydrogen VS Electric Cars</h3>
           <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, numquam.</p>
         </li>
+        <hr class="bg-white opacity-50">
         <li class="subarticle_block flex flex-col gap-2">
           <h3 class="font-medium">The Downsides of AI Artistry</h3>
           <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, numquam.</p>
         </li>
+        <hr class="bg-white opacity-50">
         <li class="subarticle_block flex flex-col gap-2">
           <h3 class="font-medium">Is VC funding drying up?</h3>
           <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, numquam.</p>
