@@ -63,3 +63,19 @@
 .shadow-base {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, .4)
 }
+
+
+#app {
+  display: grid;
+  grid-template-columns: 
+  [full-start] minmax(0,1fr)
+  [content-start] minmax(0,1440px)
+  [content-end] minmax(0,1fr)
+  [full-end]
+}
+.--full {
+  grid-column: full;
+}
+.--content {
+  grid-column: content;
+}
