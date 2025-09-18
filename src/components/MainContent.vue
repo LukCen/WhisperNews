@@ -10,7 +10,9 @@ import MainArticleBlock from './MainArticleBlock.vue';
 <template>
   <main class="flex flex-col px-2 gap-20 pb-8 min-h-screen desktop:max-w-[1440px] mx-auto">
     <GridMain />
+    <hr class="text-slate-500" />
     <ArticleList />
+    <hr class="text-slate-500" />
     <MainArticleBlock />
   </main>
 </template>

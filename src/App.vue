@@ -7,8 +7,8 @@ import AppFooter from './components/AppFooter.vue'
 </script>
 
 <template>
-  <SkipLink class="--full" />
-  <Navbar class="--content" />
+  <SkipLink />
+  <Navbar class="--full" />
   <MainContent class="--content" />
   <AppFooter class="--full" />
 </template>
