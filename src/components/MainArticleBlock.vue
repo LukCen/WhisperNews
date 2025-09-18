@@ -29,27 +29,33 @@ const articleItems: ArticleBlock[] = [
 </script>
 <template>
 
-  <section v-for="i in articleItems" :key="i.blockTitle" aria-label="Articles about gaming"
-    class="article_block flex flex-col gap-2">
+  <section v-for="i in articleItems" :key="i.blockTitle" aria-label="Articles about gaming" class="article_block flex flex-col gap-2">
     <h2 class="font-bold text-primary-red">{{ i.blockTitle }}</h2>
     <div class="article_container flex flex-col desktop:flex-row gap-10">
-      <article v-for="subi in i.blockItems" class="article_item flex flex-col">
+      <article v-for="subi in i.blockItems" class="article_item flex flex-col rounded-sm overflow-hidden">
         <!-- image -->
         <picture>
           <source :srcset="subi.imgLarge" media="(min-width: 1440px)"> <!-- desktop-->
           <img class="w-full" :src="subi.img" alt="">
         </picture>
         <!-- text block -->
-        <div class="text_block flex py-4 flex-col justify-between gap-4 h-full">
-          <h4 class="font-bold">{{ subi.title }}</h4>
-          <span class="text-violet text-[1rem]">{{ subi.subtitle }}</span>
-          <p>{{ subi.content }}</p>
+        <div class="content flex flex-col gap-4 p-4">
+          <div class="text_block flex py-4 flex-col justify-between gap-4 h-full">
+            <h4 class="font-bold">{{ subi.title }}</h4>
+            <span class="text-violet text-[1rem]">{{ subi.subtitle }}</span>
+            <p>{{ subi.content }}</p>
+          </div>
+          <a class="px-8 py-2 bg-primary-red text-offwhite font-bold tracking-wider w-fit hover:bg-midnight duration-150" href="#">Read
+            more ></a>
         </div>
-        <a class="px-8 py-2 bg-primary-red text-offwhite font-bold tracking-wider w-fit hover:bg-midnight duration-150"
-          href="#">Read
-          more ></a>
       </article>
 
     </div>
   </section>
 </template>
+
+<style scoped>
+article {
+  box-shadow: 0px 0px 15px 1px var(--color-midnight)
+}
+</style>
