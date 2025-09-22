@@ -2,7 +2,6 @@
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
-import ArticlePage from '../pages/ArticlePage.vue';
 
 const route = useRoute()
 const routeId = route.params.id
