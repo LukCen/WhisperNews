@@ -4,7 +4,7 @@ import Homepage from "../pages/Homepage.vue";
 
 const routes = [
   { path: "/", component: Homepage },
-  { path: "/article:title", component: ArticlePage }
+  { path: "/article/:id", component: ArticlePage }
 ]
 export const router = createRouter({
   history: createWebHistory(),

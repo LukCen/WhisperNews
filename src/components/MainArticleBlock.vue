@@ -1,13 +1,17 @@
 <!-- thematically-connected block of articles in a 1x2 (mobile) and 2x1(desktop) layout -->
 
 <script setup lang="ts">
+import { useRoute } from 'vue-router';
+import ArticlePage from '../pages/ArticlePage.vue';
 
+const route = useRoute()
+const routeId = route.params.id
 const articleItems: ArticleBlock[] = [
   {
     blockTitle: 'Gaming',
     blockItems: [
       {
-        id: 'article_gaming_1',
+        id: '0',
         img: '/main_article_block/article_gaming_1_mobile.webp',
         imgLarge: '/main_article_block/article_gaming_1_desktop.webp',
         title: 'The Success and Failures of Gacha Games',
@@ -15,7 +19,7 @@ const articleItems: ArticleBlock[] = [
         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis vero dolores ratione incidunt soluta dolore vel. Itaque similique, minima consequuntur ad eum illum tenetur? Sed architecto unde, culpa aut quibusdam, pariatur dolorem laudantium iusto maxime facilis aliquam error perferendis beatae.'
       },
       {
-        id: 'article_gaming_2',
+        id: '1',
         img: '/main_article_block/article_gaming_2_mobile.webp',
         imgLarge: '/main_article_block/article_gaming_2_desktop.webp',
         title: 'Mobile vs Consoles – Does the Old Guard Hold Up?',
@@ -25,7 +29,7 @@ const articleItems: ArticleBlock[] = [
     ]
   }
 ]
-
+console.log(route.path, routeId)
 </script>
 <template>
 
@@ -45,8 +49,8 @@ const articleItems: ArticleBlock[] = [
             <span class="text-violet text-[1rem]">{{ subi.subtitle }}</span>
             <p>{{ subi.content }}</p>
           </div>
-          <a class="px-8 py-2 bg-primary-red text-offwhite font-bold tracking-wider w-fit hover:bg-midnight duration-150" href="#">Read
-            more ></a>
+          <router-link class="px-8 py-2 bg-primary-red text-offwhite font-bold tracking-wider w-fit hover:bg-midnight duration-150" :to="`/article/${subi.id}`">Read
+            more ></router-link>
         </div>
       </article>
       <p></p>

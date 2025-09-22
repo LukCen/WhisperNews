@@ -20,7 +20,14 @@ test('Has required parameters, of expected type', () => {
     // contents
     expect(dataElement.contents, "contents does not exist").toBeDefined()
     expect(typeof dataElement.contents, "contents does not equal type - object").toBe('object')
+    // contents - internal structure
+    const contents = dataElement.contents
+    console.log(contents)
+    expect(contents.contentBlock).toBeDefined()
+    expect(typeof contents.contentBlock).toBe('object')
 
+    expect(contents.contentBlock.htmlTag).toBeDefined()
+    expect(typeof contents.contentBlock.htmlTag).toBe('string')
   })
 })
 
