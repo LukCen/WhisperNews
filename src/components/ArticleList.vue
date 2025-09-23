@@ -1,20 +1,23 @@
 <script setup lang="ts">
+import imgRetro from "/image-retro-pcs.jpg"
+import imgLaptops from "/image-top-laptops.jpg"
+import imgGrowth from "/image-gaming-growth.jpg"
 
 // In a real project this would probably be a fetch from a database, but this is a mock-up, so a simple array will do
 const articleList: ArticleItemSimple[] = [
   {
     id: 1,
-    img: "/image-retro-pcs.jpg",
+    img: imgRetro,
     title: "Reviving Retro PCs"
   },
   {
     id: 2,
-    img: "/image-top-laptops.jpg",
+    img: imgLaptops,
     title: "Top 10 Laptops of 2025"
   },
   {
     id: 3,
-    img: "/image-gaming-growth.jpg",
+    img: imgGrowth,
     title: "The Growth of Gaming"
   }
 
