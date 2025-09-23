@@ -1,26 +1,29 @@
 <!-- thematically-connected block of articles in a 1x2 (mobile) and 2x1(desktop) layout -->
 
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
+// image imports
+import imgGaming from "/main_article_block/article_gaming_1_mobile.webp"
+import imgGamingDesktop from "/main_article_block/article_gaming_1_desktop.webp"
 
-const route = useRoute()
-const routeId = route.params.id
+import imgMobileConsoles from "/main_article_block/article_gaming_2_mobile.webp"
+import imgMobileConsolesDesktop from "/main_article_block/article_gaming_2_desktop.webp"
+
 const articleItems: ArticleBlock[] = [
   {
     blockTitle: 'Gaming',
     blockItems: [
       {
         id: '0',
-        img: '/main_article_block/article_gaming_1_mobile.webp',
-        imgLarge: '/main_article_block/article_gaming_1_desktop.webp',
+        img: imgGaming,
+        imgLarge: imgGamingDesktop,
         title: 'The Success and Failures of Gacha Games',
         subtitle: 'How microtransactions shape the future of mobile gaming',
         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis vero dolores ratione incidunt soluta dolore vel. Itaque similique, minima consequuntur ad eum illum tenetur? Sed architecto unde, culpa aut quibusdam, pariatur dolorem laudantium iusto maxime facilis aliquam error perferendis beatae.'
       },
       {
         id: '1',
-        img: '/main_article_block/article_gaming_2_mobile.webp',
-        imgLarge: '/main_article_block/article_gaming_2_desktop.webp',
+        img: imgMobileConsoles,
+        imgLarge: imgMobileConsolesDesktop,
         title: 'Mobile vs Consoles – Does the Old Guard Hold Up?',
         subtitle: 'Why portability isn’t always enough to win the game',
         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis vero dolores ratione incidunt soluta dolore vel. Itaque similique, minima consequuntur ad eum illum tenetur? Sed architecto unde, culpa aut quibusdam, pariatur dolorem laudantium iusto maxime facilis aliquam error perferendis beatae.'
@@ -28,7 +31,7 @@ const articleItems: ArticleBlock[] = [
     ]
   }
 ]
-console.log(route.path, routeId)
+
 </script>
 <template>
 

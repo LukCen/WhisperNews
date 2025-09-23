@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import imgWeb from "/image-web3-mobile.jpg"
+import imgWeb from "/image-web-3-mobile.jpg"
 
 </script>
 <template>
