@@ -7,7 +7,7 @@ type ContentBlock = {
     childContent: {
       header: string,
       text: {
-        paragraphs: { text: string }[]
+        paragraphs: string[]
       }
     }[]
   }[]
