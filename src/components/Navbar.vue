@@ -14,7 +14,7 @@ const menuBtnRef = ref<HTMLElement | null>(null)
 <template>
   <nav aria-label="Main menu" class="flex sticky justify-between items-center px-2 desktop:px-4 py-2 top-0 bg-offwhite border-violet h-[80px]">
     <!-- left side -->
-    <a aria-label="Back to homepage" href="/"><img :src="logo" alt="WhisperNews homepage"></a>
+    <a aria-label="Back to homepage" href="/"><img :src="logo" alt="WhisperNews homepage" loading="eager"></a>
     <!-- desktop menu -->
     <ul class="menu_row hidden desktop:flex justify-end gap-5 w-full">
       <li v-for="item in ['Home', 'New', 'Popular', 'Trending', 'Categories']" :key="item" class="mobile_menu__item">

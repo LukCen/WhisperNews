@@ -8,7 +8,7 @@ import imgWeb from "/image-web-3-mobile.jpg"
     <div class="left flex flex-col desktop:flex-8/12">
       <picture>
         <source media="(min-width: 1440px)" srcset="/image-web-3-desktop.jpg">
-        <img :src="imgWeb" alt="Main banner" class="w-full">
+        <img :src="imgWeb" alt="Main banner" class="w-full" loading="eager">
       </picture>
       <!-- text -->
       <div class="article flex flex-col desktop:flex-row gap-4 py-4">
@@ -30,19 +30,28 @@ import imgWeb from "/image-web-3-mobile.jpg"
     <aside class="right flex flex-col desktop:flex-1/4 bg-midnight text-offwhite px-6 py-8 gap-4" aria-label="Latest news">
       <h2 class="text-primary-orange font-semibold">New</h2>
       <ul class="flex flex-col gap-4" role="list">
-        <li class="subarticle_block flex flex-col gap-2">
-          <h3 class="font-medium">Hydrogen VS Electric Cars</h3>
-          <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, numquam.</p>
+        <li class="subarticle_block">
+          <a href="" class="flex flex-col gap-2 hover:text-primary-orange duration-150">
+            <h3 class="font-medium">Hydrogen VS Electric Cars</h3>
+            <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, numquam.</p>
+
+          </a>
         </li>
         <hr class="bg-white opacity-50">
-        <li class="subarticle_block flex flex-col gap-2">
-          <h3 class="font-medium">The Downsides of AI Artistry</h3>
-          <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, numquam.</p>
+        <li class="subarticle_block">
+          <a href="" class="flex flex-col gap-2 hover:text-primary-orange duration-150">
+            <h3 class="font-medium">The Downsides of AI Artistry</h3>
+            <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, numquam.</p>
+
+          </a>
         </li>
         <hr class="bg-white opacity-50">
-        <li class="subarticle_block flex flex-col gap-2">
-          <h3 class="font-medium">Is VC funding drying up?</h3>
-          <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, numquam.</p>
+        <li class="subarticle_block">
+          <a href="" class="flex flex-col gap-2 hover:text-primary-orange duration-150">
+            <h3 class="font-medium">Is VC funding drying up?</h3>
+            <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, numquam.</p>
+
+          </a>
         </li>
       </ul>
     </aside>

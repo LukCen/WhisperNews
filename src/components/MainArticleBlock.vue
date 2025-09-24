@@ -42,7 +42,7 @@ const articleItems: ArticleBlock[] = [
         <!-- image -->
         <picture>
           <source :srcset="subi.imgLarge" media="(min-width: 1440px)"> <!-- desktop-->
-          <img class="w-full" :src="subi.img" alt="">
+          <img class="w-full" :src="subi.img" alt="" loading="lazy">
         </picture>
         <!-- text block -->
         <div class="content flex flex-col gap-4 p-4">

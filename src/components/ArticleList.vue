@@ -31,7 +31,7 @@ const articleList: ArticleItemSimple[] = [
     <ul class="flex flex-col desktop:flex-row gap-6" role="list">
       <li v-for="i in articleList" class="overflow-hidden shadow-base rounded-sm h-fit hover:scale-105 duration-250">
         <a href="#" class="article flex gap-3 h-fit" aria-label="Read more about Reviving Retro PCs">
-          <img :src="i.img" alt="Old retro computer setup" class="min-w-[200px]">
+          <img :src="i.img" alt="Old retro computer setup" class="min-w-[200px]" loading="lazy">
           <div class="text flex flex-col gap-2">
             <span class="h3 text-primary-red font-medium">0{{ i.id }}</span>
             <div class="text_content flex flex-col justify-around h-full">
