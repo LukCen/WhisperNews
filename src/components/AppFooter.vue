@@ -32,10 +32,10 @@ const followUs = [
 
 <template>
   <footer class="grid w-full p-4 gap-5 bg-midnight text-offwhite border-t-1">
-    <div class="footer-entries flex justify-around items-center w-3/4 desktop:w-full columns-8">
-      <a href="#" v-for="item in footerItems" class="hover:text-primary-orange duration-150">{{ item }}</a>
+    <div class="footer-entries flex justify-around items-center gap-4">
+      <a href="#" v-for="item in footerItems" class="hover:text-primary-orange duration-150 desktop:text-3xl">{{ item }}</a>
     </div>
-    <div class="footer-extra justify-center items-center flex flex-col gap-4 border-l-1">
+    <div class="footer-extra justify-center items-center flex flex-col gap-4 border-t-1 desktop:border-l-1 desktop:border-t-0 p-4">
       <h4>Check out our socials!</h4>
       <div class="social-box flex justify-center gap-8">
         <a class="flex gap-2" href="#" v-for="item in followUs">
@@ -44,35 +44,38 @@ const followUs = [
 
       </div>
     </div>
-    <small>Footer icons via <a class="text-primary-orange text-[size:inherit]" href="https://icons8.com">icons8</a></small>
+    <small class=" text-center">Footer icons via <a class="text-primary-orange text-[size:inherit]" href="https://icons8.com">icons8</a></small>
   </footer>
 
 </template>
 
 <style scoped>
-footer {
-  grid-template-columns:
-    auto;
-  grid-template-rows:
-    auto auto;
-}
-.footer-entries, .footer-extra {
-  grid-row: 1/2;
-}
+@media (min-width: 1440px) {
 
-.footer-entries {
-  grid-column: 1 / 9;
-}
-.footer-extra {
-  grid-column: 10 / 12
-}
-small {
-  grid-row: 2/3;
-  grid-column: 1 / 12;
-  text-align: center;
-}
+  footer {
+    grid-template-columns:
+      auto;
+    grid-template-rows:
+      auto auto;
+  }
+  .footer-entries, .footer-extra {
+    grid-row: 1/2;
+  }
 
-.social-box a:hover {
-  filter: brightness(0) saturate(100%) invert(72%) sepia(72%) saturate(428%) hue-rotate(337deg) brightness(94%) contrast(94%);
+  .footer-entries {
+    grid-column: 1 / 9;
+  }
+  .footer-extra {
+    grid-column: 10 / 12
+  }
+  small {
+    grid-row: 2/3;
+    grid-column: 1 / 12;
+    text-align: center;
+  }
+
+  .social-box a:hover {
+    filter: brightness(0) saturate(100%) invert(72%) sepia(72%) saturate(428%) hue-rotate(337deg) brightness(94%) contrast(94%);
+  }
 }
 </style>
