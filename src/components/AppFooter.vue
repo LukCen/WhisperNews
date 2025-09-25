@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useMediaQuery } from '@vueuse/core'
-import { ref } from 'vue'
+// import { useMediaQuery } from '@vueuse/core'
+// import { ref } from 'vue'
 import fb from "../assets/facebook.webp"
 import x from "../assets/x.webp"
 import bsk from "../assets/bluesky.webp"
@@ -14,20 +14,20 @@ const followUs = [
   { name: "bluesky", logo: bsk }
 ]
 
-const openId = ref<number | null>(null)
-const isDesktop = useMediaQuery(`(min-width: 1439px)`)
-let lastClick = 0
+// const openId = ref<number | null>(null)
+// const isDesktop = useMediaQuery(`(min-width: 1439px)`)
+// let lastClick = 0
 
-function safeToggle(id: number) {
-  const now = Date.now()
+// function safeToggle(id: number) {
+//   const now = Date.now()
 
-  // Filtr anty-double-trigger
-  if (now - lastClick < 300) return
-  lastClick = now
+//   // Filtr anty-double-trigger
+//   if (now - lastClick < 300) return
+//   lastClick = now
 
-  // Logika toggle
-  openId.value = openId.value === id ? null : id
-}
+//   // Logika toggle
+//   openId.value = openId.value === id ? null : id
+// }
 </script>
 
 <template>
